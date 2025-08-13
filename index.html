@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfólio de Gabriel Barioni — Front-end Developer. HTML, CSS e JavaScript." />
+  <title>Gabriel Barioni</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <button
+        id="menu-toggle"
+        class="menu-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        aria-label="Abrir menu"
+      >
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-nav" role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="#skills" lang="en">Skills</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/gabrielbarioni"
+              target="_blank"
+              rel="noopener"
+              lang="en"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <h1>Gabriel Barioni</h1>
+        <p class="lead"><span lang="en">Front-end Developer</span> — <span lang="en">HTML</span> • <span lang="en">CSS</span> • <span lang="en">JavaScript</span></p>
+        <div class="hero-actions">
+          <a
+            class="btn btn-primary"
+            href="https://www.linkedin.com/in/gabrielbarioni"
+            target="_blank"
+            rel="noopener"
+            lang="en"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="skills-title" lang="en">Skills</h2>
+        <div class="skills-grid" role="list">
+          <article class="skill" role="listitem">
+            <h3 lang="en">HTML</h3>
+            <div class="skill-bar" aria-hidden="true"><span style="--pct:95%"></span></div>
+            <p>Semântico, acessibilidade e SEO básico.</p>
+          </article>
+
+          <article class="skill" role="listitem">
+            <h3 lang="en">CSS</h3>
+            <div class="skill-bar" aria-hidden="true"><span style="--pct:90%"></span></div>
+            <p>Flexbox, Grid, animações e responsividade.</p>
+          </article>
+
+          <article class="skill" role="listitem">
+            <h3 lang="en">JavaScript</h3>
+            <div class="skill-bar" aria-hidden="true"><span style="--pct:85%"></span></div>
+            <p>DOM, eventos e interatividade com JS puro.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container">
+        <h2>Sobre</h2>
+        <p>Sou Gabriel Barioni, desenvolvedor <span lang="en">Front-end</span>. Gosto de interfaces limpas, performáticas e acessíveis.</p>
+      </div>
+    </section>
+  </main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p>© 2025 Gabriel Barioni</p>
+  </div>
+</footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

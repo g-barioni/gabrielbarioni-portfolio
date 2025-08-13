@@ -1,0 +1,250 @@
+:root {
+  --bg: #121214;
+  --card: #1e1e20;
+  --muted: #6c4ba2;
+  --accent: #ff5c8d;
+  --accent-2: #ffcc00;
+  --text: #ffffff;
+  --container: 1100px;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+}
+
+.container {
+  width: 92%;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.primary-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus {
+  background: rgba(255, 255, 255, 0.04);
+  outline: none;
+}
+
+.btn-cv {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: inline-block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1100;
+  }
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  width: 22px;
+  height: 3px;
+  background: var(--text);
+  border-radius: 3px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+.hamburger::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 22px;
+  height: 3px;
+}
+.hamburger::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 22px;
+  height: 3px;
+}
+.menu-toggle[aria-expanded='true'] .hamburger {
+  background: transparent;
+}
+.menu-toggle[aria-expanded='true'] .hamburger::before {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+.menu-toggle[aria-expanded='true'] .hamburger::after {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.hero {
+  padding: 3rem 0;
+  text-align: center;
+}
+.hero .lead {
+  color: #dcdcdc;
+  margin: 0 0 1rem;
+}
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skills-title {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0;
+  text-align: center;
+}
+.skill {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+.skill h3 {
+  color: var(--accent);
+  margin: 0;
+  letter-spacing: 0.06em;
+}
+.skill-bar {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 180px;
+}
+.skill-bar span {
+  display: block;
+  height: 100%;
+  width: var(--pct, 50%);
+  background: linear-gradient(90deg, var(--accent), #e05d88);
+}
+.skill p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+#sobre .container {
+  text-align: center;
+}
+
+.site-footer {
+  padding: 1.6rem 0;
+  text-align: center;
+  color: #cfcfcf;
+  background: transparent;
+}
+
+@media (max-width: 960px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .primary-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    background: var(--card);
+    padding: 3rem 12px 12px;
+    border-radius: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+    z-index: 1000;
+  }
+  .primary-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .primary-nav ul {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 2rem;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 1.2rem;
+  }
+  .btn {
+    padding: 7px 10px;
+  }
+}
