@@ -1,23 +1,30 @@
 # Gabriel Barioni Portfolio
 
 ## Description  
-Personal website and portfolio of Front-end developer Gabriel Barioni. It showcases my skills, a short bio, and links to my LinkedIn profile.
+Portfólio profissional de Gabriel Barioni — Desenvolvedor Front-end, com projetos acessíveis e SEO avançado.
 
 ## Technologies Used  
 - HTML5  
-- CSS3 (with Google Fonts)  
-- JavaScript (for mobile menu toggle)
+- CSS3 (com Google Fonts)  
+- JavaScript (para menu mobile)
 
 ## Structure  
-- **Header** with navigation menu (Skills, About, LinkedIn)  
-- **Hero** section with name, title, and LinkedIn button  
-- **Skills** section with progress bars for HTML, CSS, and JavaScript  
-- **About** section with a short introduction  
-- **Footer** with copyright
+- **Header** com menu (Skills, Sobre, LinkedIn)  
+- **Hero** centralizado com nome, título e botão LinkedIn  
+- **Skills** com barra de progresso e SEO avançado indicado  
+- **About** com descrição pessoal  
+- **Footer** com copyright
+
+## SEO & Social Media  
+- Tags Open Graph (OG) e Twitter Card para compartilhamento profissional  
+- Sitemap.xml incluso (`sitemap.xml`)  
+- Links externos com `rel="noopener"`
 
 ## How to Use  
-1. Open `index.html` in any modern browser.  
-2. For development, edit the `style.css` and `script.js` files as needed.
+1. Abra `index.html` em qualquer navegador moderno.  
+2. Coloque a imagem OG (`og-image.png`) em `/images` (1200x630px).  
+3. Submeta `sitemap.xml` no Google Search Console.  
+4. Edite `style.css` ou `script.js` apenas se necessário.
 
 ## Contact  
 - [LinkedIn](https://www.linkedin.com/in/gabrielbarioni)
